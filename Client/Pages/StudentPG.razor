@@ -1,0 +1,42 @@
+﻿@page "/Create"
+@using TablePractis.Client.Services;
+@using TablePractis.Shared;
+@inject IStudentService studentService
+@inject NavigationManager navTo
+
+<h3>Create Student</h3>
+<EditForm Model="student" OnSubmit="Handlesubmit">
+	<div>
+		<label for="name">Name :</label><br/>
+		<InputText id="name" @bind-Value="student.Name" class="form-control"></InputText><br />
+	</div>
+	<div>
+		<label for="firstname">First Name :</label><br />
+		<InputText id="firstname" @bind-Value="student.FirstName" class="form-control"></InputText><br />
+	</div>
+	<div>
+		<label for="lastname">Last Name :</label><br />
+		<InputText id="lastname" @bind-Value="student.LastName" class="form-control"></InputText><br />
+	</div>
+	<div>
+		<label for="email">Email :</label><br />
+		<InputText id="email" @bind-Value="student.Email" class="form-control"></InputText><br />
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+<button class="btn btn-danger" @onclick="navigator">CANCEL</button>
+</EditForm>
+@code {
+	public Student student { get; set; } = new Student();
+
+	public async Task Handlesubmit()
+	{
+		await studentService.CreateStudent(student);
+		await navigator();
+		//navTo.NavigateTo("/students");
+	}
+	public async Task navigator()
+	{
+		navTo.NavigateTo("/students");
+	}
+
+}

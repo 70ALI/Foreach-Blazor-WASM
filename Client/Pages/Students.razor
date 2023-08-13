@@ -1,0 +1,69 @@
+﻿@page "/students"
+@using TablePractis.Client.Services;
+@using TablePractis.Shared;
+@inject IStudentService studentService
+@inject NavigationManager navTo
+
+@if (IsCompleted == 1)
+{
+	<h1 class="spinner-border"></h1>
+}
+else if (IsCompleted == 2)
+{
+	<div>
+		<table class="table table-success">
+			<tbody>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+				</tr>
+				@foreach (var std in studentService.Students)
+				{
+					<tr>
+						<td>@std.Id</td>
+						<td>@std.Name</td>
+						<td>@std.FirstName</td>
+						<td>@std.LastName</td>
+						<td>@std.Email</td>
+						<td>
+							<button class="btn btn-danger" @onclick="(() => DeleteStudent(std.Id))"><i class="oi oi-pencil"></i></button>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+		<br />
+		<button class="btn btn-success" @onclick="navigatorC">Add New</button>
+		<button class="btn btn-success" @onclick="navigatorI">BACK</button>
+	</div>
+}
+@code {
+	public int IsCompleted = 1;
+	public int ID = 0;
+	protected override async Task OnInitializedAsync()
+	{
+		await studentService.GetStudents();
+		IsCompleted = 2;
+	}
+	public async Task navigatorC()
+	{
+		navTo.NavigateTo("/Create");
+	}
+	public async Task navigatorI()
+	{
+		navTo.NavigateTo("/");
+	}
+	async Task DeleteStudent(int id)
+	{
+		await studentService.DeleteStudent(id);
+		await navigator();
+	}
+	public async Task navigator()
+	{
+		navTo.NavigateTo("/students", true);
+	}
+
+}

@@ -1,0 +1,27 @@
+﻿@page "/"
+@inject NavigationManager navTo
+
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+<br />
+<br />
+<br />
+<hr />
+
+
+<button class="btn btn-primary" @onclick="navigator">Student Schadual</button>
+
+
+@code{
+
+	public async Task navigator()
+	{
+		navTo.NavigateTo("/students");
+	}
+}

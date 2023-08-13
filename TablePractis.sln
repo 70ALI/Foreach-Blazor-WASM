@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TablePractis.Server", "Server\TablePractis.Server.csproj", "{1B22C1B5-4364-47D3-9D9E-8A861CB41BDC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TablePractis.Client", "Client\TablePractis.Client.csproj", "{0E67E3F0-2FE9-4F0F-9C1F-8FFC9018CA9E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TablePractis.Shared", "Shared\TablePractis.Shared.csproj", "{29D190D6-C832-4FE5-A38E-2B6FF7026BAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{77CD1C48-5C94-4C22-84CB-3BB4BF2CF9E5}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B22C1B5-4364-47D3-9D9E-8A861CB41BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B22C1B5-4364-47D3-9D9E-8A861CB41BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B22C1B5-4364-47D3-9D9E-8A861CB41BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B22C1B5-4364-47D3-9D9E-8A861CB41BDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E67E3F0-2FE9-4F0F-9C1F-8FFC9018CA9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E67E3F0-2FE9-4F0F-9C1F-8FFC9018CA9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E67E3F0-2FE9-4F0F-9C1F-8FFC9018CA9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E67E3F0-2FE9-4F0F-9C1F-8FFC9018CA9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29D190D6-C832-4FE5-A38E-2B6FF7026BAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D190D6-C832-4FE5-A38E-2B6FF7026BAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D190D6-C832-4FE5-A38E-2B6FF7026BAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D190D6-C832-4FE5-A38E-2B6FF7026BAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD1CBAA8-4131-4D31-AB88-F14F5C40503F}
+	EndGlobalSection
+EndGlobal
